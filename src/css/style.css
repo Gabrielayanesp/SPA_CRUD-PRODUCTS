@@ -1,18 +1,23 @@
 :root {
-    --azul-claro: #e3f2fd;
+    --azul-claro: #c7e2f5;
+    --azul-fondo: #8fbcdd;
     --azul: #1976d2;
     --azul-oscuro: #0d47a1;
-    --gris: #f5f5f5;
+    --gris: #e8edffd5;
     --borde: #90caf9;
     --texto: #0a0a0a;
 }
 
 body {
-    background-color: var(--azul-oscuro);
+    background-color: var(--azul-fondo);
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 2rem;
     color: var(--texto);
+}
+
+* {
+    transition: all 0.2s ease-in-out;
 }
 
 h1 {
@@ -60,6 +65,37 @@ button:hover {
     background-color: var(--azul-oscuro);
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content button {
+    width: 100px; 
+}
+
 .busqueda {
     display: flex;
     gap: 1rem;
@@ -79,6 +115,11 @@ button:hover {
     border-left: 5px solid var(--azul);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card h3 {
@@ -104,4 +145,5 @@ button:hover {
 
 .card button {
     margin-right: 0.5rem;
-    padding: 0.4rem 0.8rem; }
+    padding: 0.4rem 0.8rem;
+}

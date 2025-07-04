@@ -1,46 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sisteima CRUD de Productos</title>
+  <title>Product CRUD System</title>
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-  <h1>Sistema CRUD de Productos</h1>
+  <h1>Product CRUD System</h1>
 
   <div class="formulario">
-    <h2>Agregar Nuevo Producto</h2>
+    <h2>Add New Product</h2>
     <form id="producto-form">
-      <input type="text" id="nombre" placeholder="Nombre del Producto" required>
-      <input type="number" id="precio" placeholder="Precio" required>
-      <textarea id="descripcion" placeholder="Descripción" required></textarea>
+      <input type="text" id="nombre" placeholder="Product name" required>
+      <input type="number" id="precio" placeholder="Price" required>
+      <textarea id="descripcion" placeholder="Description" required></textarea>
       <select id="categoria">
-        <option>Electrónica</option>
-        <option>Hogar</option>
-        <option>Ropa</option>
-        <option>Alimentos</option>
+        <option>Electronics</option>
+        <option>Home</option>
+        <option>Clothes</option>
+        <option>Food</option>
       </select>
       <input type="number" id="stock" placeholder="Stock" required>
-      <button type="submit">Guardar Producto</button>
+      <button type="submit">Save Product</button>
     </form>
   </div>
 
   <div class="busqueda">
-    <input type="text" id="buscador" placeholder="Buscar productos...">
+    <input type="text" id="buscador" placeholder="Search products...">
     <select id="filtro-categoria">
-      <option value="">Todas las categorías</option>
-      <option value="Electrónica">Electrónica</option>
-      <option value="Hogar">Hogar</option>
-      <option value="Ropa">Ropa</option>
-      <option value="Alimentos">Alimentos</option>
+      <option value="">All categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Home">Home</option>
+      <option value="Clothes">Clothes</option>
+      <option value="Food">Food</option>
     </select>
   </div>
 
   <p id="contador"></p>
-
   <div id="lista-productos"></div>
 
-  <script src="gestion_api.js"></script>
+  <div class="modal" id="edit-modal">
+    <div class="modal-content">
+      <h2>Edit Product</h2>
+      <form id="edit-form">
+        <input type="text" id="edit-nombre" required>
+        <input type="number" id="edit-precio" required>
+        <textarea id="edit-descripcion" required></textarea>
+        <select id="edit-categoria">
+          <option>Electronics</option>
+          <option>Home</option>
+          <option>Clothes</option>
+          <option>Food</option>
+        </select>
+        <input type="number" id="edit-stock" required>
+        <input type="hidden" id="edit-id">
+        <button type="submit">Update</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./src/js/gestion_api.js"></script>
 </body>
 </html>

@@ -1,7 +1,20 @@
 {
-  "coder": [
+  "productos": [
     {
-        
+      "id": "1",
+      "nombre": "Iphone 12pro",
+      "precio": 3200000,
+      "descripcion": "Iphone 12 pro ",
+      "categoria": "Electronics",
+      "stock": 1
+    },
+    {
+      "id": "2",
+      "nombre": "Tenis Puma",
+      "precio": 599990,
+      "descripcion": "Tenis women",
+      "categoria": "Clothes",
+      "stock": 3
     }
   ]
 }
