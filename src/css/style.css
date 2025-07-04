@@ -1,0 +1,107 @@
+:root {
+    --azul-claro: #e3f2fd;
+    --azul: #1976d2;
+    --azul-oscuro: #0d47a1;
+    --gris: #f5f5f5;
+    --borde: #90caf9;
+    --texto: #0a0a0a;
+}
+
+body {
+    background-color: var(--azul-oscuro);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    color: var(--texto);
+}
+
+h1 {
+    text-align: center;
+    color: var(--azul-oscuro);
+}
+
+.formulario {
+    background: var(--azul-claro);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 2rem auto;
+    border: 1px solid var(--borde);
+}
+
+.formulario h2 {
+    margin-top: 0;
+    color: var(--azul);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--borde);
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.busqueda {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#lista-productos {
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-left: 5px solid var(--azul);
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin: 0.3rem 0;
+}
+
+.card small {
+    background: var(--borde);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.card .acciones {
+    margin-top: 0.5rem;
+}
+
+.card button {
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.8rem; }
