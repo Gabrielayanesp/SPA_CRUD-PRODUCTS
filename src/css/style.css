@@ -108,6 +108,13 @@ button:hover {
     margin: auto;
 }
 
+#contador {
+    text-align: center;
+    color: var(--azul-oscuro);
+    font-size: 1.2rem;
+
+}
+
 .card {
     background: white;
     padding: 1rem;

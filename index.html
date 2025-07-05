@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product CRUD System</title>
-  <link rel="stylesheet" href="./src/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CRUD Products">
+    <meta name="keywords" content="Create, update, delete, Crud, Json-Server, JavaScript, HTML">
+    <meta name="sitedomain" content="https://github.com/Gabrielayanesp/SPA_CRUD-PRODUCTS.git">
+    <meta name="organization" content="Gabrielayanesp">
+    <meta name="author" content="Maria Gabriela Yanes Pardo">
+    <meta name="designer" content="Maria Gabriela Yanes Pardo">
+    <meta name="copyright" content="© 2025 Gabrielayanesp. All rights reserved">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="15days">
+    <title>Product CRUD System</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-  <h1>Product CRUD System</h1>
+    <h1>Product CRUD System</h1>
 
-  <div class="formulario">
-    <h2>Add New Product</h2>
-    <form id="producto-form">
-      <input type="text" id="nombre" placeholder="Product name" required>
-      <input type="number" id="precio" placeholder="Price" required>
-      <textarea id="descripcion" placeholder="Description" required></textarea>
-      <select id="categoria">
-        <option>Electronics</option>
-        <option>Home</option>
-        <option>Clothes</option>
-        <option>Food</option>
-      </select>
-      <input type="number" id="stock" placeholder="Stock" required>
-      <button type="submit">Save Product</button>
-    </form>
-  </div>
-
-  <div class="busqueda">
-    <input type="text" id="buscador" placeholder="Search products...">
-    <select id="filtro-categoria">
-      <option value="">All categories</option>
-      <option value="Electronics">Electronics</option>
-      <option value="Home">Home</option>
-      <option value="Clothes">Clothes</option>
-      <option value="Food">Food</option>
-    </select>
-  </div>
-
-  <p id="contador"></p>
-  <div id="lista-productos"></div>
-
-  <div class="modal" id="edit-modal">
-    <div class="modal-content">
-      <h2>Edit Product</h2>
-      <form id="edit-form">
-        <input type="text" id="edit-nombre" required>
-        <input type="number" id="edit-precio" required>
-        <textarea id="edit-descripcion" required></textarea>
-        <select id="edit-categoria">
-          <option>Electronics</option>
-          <option>Home</option>
-          <option>Clothes</option>
-          <option>Food</option>
+    <div class="formulario">
+        <h2>Add New Product</h2>
+        <form id="producto-form">
+        <input type="text" id="nombre" placeholder="Product name" required>
+        <input type="number" id="precio" placeholder="Price" required>
+        <textarea id="descripcion" placeholder="Description" required></textarea>
+        <select id="categoria">
+            <option>Electronics</option>
+            <option>Home</option>
+            <option>Clothes</option>
+            <option>Food</option>
         </select>
-        <input type="number" id="edit-stock" required>
-        <input type="hidden" id="edit-id">
-        <button type="submit">Update</button>
-        <button type="button" id="cancel-edit">Cancel</button>
-      </form>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <button type="submit">Save Product</button>
+        </form>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="./src/js/gestion_api.js"></script>
+    <div class="busqueda">
+        <input type="text" id="buscador" placeholder="Search products...">
+        <select id="filtro-categoria">
+        <option value="">All categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Home">Home</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>
+        </select>
+    </div>
+
+    <p id="contador"></p>
+    <div id="lista-productos"></div>
+
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+        <h2>Edit Product</h2>
+        <form id="edit-form">
+            <input type="text" id="edit-nombre" required>
+            <input type="number" id="edit-precio" required>
+            <textarea id="edit-descripcion" required></textarea>
+            <select id="edit-categoria">
+            <option>Electronics</option>
+            <option>Home</option>
+            <option>Clothes</option>
+            <option>Food</option>
+            </select>
+            <input type="number" id="edit-stock" required>
+            <input type="hidden" id="edit-id">
+            <button type="submit">Update</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/js/gestion_api.js"></script>
 </body>
 </html>
